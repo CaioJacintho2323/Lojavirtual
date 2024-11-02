@@ -27,12 +27,21 @@ public class CarrinhoCompras {
         }
     }
 
+
     public void calcularTotal() {
         double total = 0;
         for (Produto produto : itensDoCarrinho) {
             total += produto.getPreco() * produto.getQuantidadeEmEstoque();
         }
         System.out.println("Total do carrinho: R$" + total);
+    }
+
+
+    @Override
+    public String toString() {
+        return "CarrinhoCompras{" +
+                "itensDoCarrinho=" + itensDoCarrinho +
+                '}';
     }
 }
 
